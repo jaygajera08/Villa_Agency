@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react';
+import NavbarRoutes from '../../Layout/Navbar/NavbarRoutes';
 
 const Features = lazy(() => import('./lib/Features'));
 const Video = lazy(() => import('./lib/Video'));

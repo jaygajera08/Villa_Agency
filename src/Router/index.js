@@ -21,7 +21,7 @@ const PageRouter = () => {
   return (
     <Routes>
       {/* first render login page :-  */}
-      <Route path="/" element={<Suspense fallback={<Spin size={60} />}><Home /></Suspense>}/>
+      <Route path="/" element={<Suspense fallback={<Spin size={60} />}><NavbarRoutes /></Suspense>}/>
 
       {/* Navbar route is set to all pages :- */}
       <Route element={<NavbarRoutes />}>
