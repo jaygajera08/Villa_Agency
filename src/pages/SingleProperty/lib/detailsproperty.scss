@@ -1,0 +1,155 @@
+// variables
+$primary-color: #f35525;
+$secondary-color: #1e1e1e;
+$light-gray: #d2d2d2;
+$text-color: #333232;
+$light-bg: #fbd9cf;
+
+.detailsapartment_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  @media (max-width: 868px) {
+    flex-direction: column;
+  }
+}
+
+.singledetailslist {
+  width: 30%;
+  @media (max-width: 868px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.single_table {
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+
+  .single_info {
+    border-bottom: 1px solid $light-gray;
+    padding: 20px 0;
+
+    .single_information {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      p {
+        color: #7d7c7c;
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.single_img {
+  width: 35%;
+  @media (max-width: 868px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  img {
+    padding: 0;
+  }
+}
+
+.single_summary {
+  width: 25%;
+  @media (max-width: 868px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 28px;
+    color: $text-color;
+  }
+}
+
+.single_btn {
+  margin-top: 30px;
+
+  .details_link {
+    display: inline-block;
+    background-color: $secondary-color;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 30px 0px 0px;
+    border-radius: 25px;
+    transition: all 0.3s;
+
+    i {
+      background-color: $primary-color;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 50px;
+      display: inline-block;
+      margin-right: 15px;
+      margin-left: -1px;
+    }
+
+    &:hover {
+      color: $primary-color;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.abcs {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ant-collapse-header-text {
+  color: $primary-color;
+}
+
+.ant-collapse-expand-icon {
+  color: $primary-color;
+}
+
+.singleproperty_link {
+  background-color: $light-bg;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 14px;
+  color: $secondary-color;
+  padding: 5px 12px;
+  display: inline-block;
+  margin-left: 20px;
+  border: none;
+
+  &:hover {
+    border: 1px solid $primary-color;
+    background-color: transparent;
+    color: $primary-color;
+  }
+}

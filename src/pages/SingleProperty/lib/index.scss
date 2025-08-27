@@ -1,0 +1,225 @@
+// Variables
+$primary-color: #fbd9cf;
+$secondary-color: #f35525;
+$dark-color: #1e1e1e;
+$light-color: #ffffff;
+$text-color: #4a4a4a;
+$light-grey: #838282; 
+$border-color: #eee;
+$box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style($bg-color, $text-color) {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $bg-color;
+  border-radius: 5px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  padding: 0px 25px;
+  color: $text-color;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.details {
+  margin: 60px 0;
+  @include flex-center;
+
+  &_content {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .deatails1 {
+      width: 65%;
+    }
+
+    .detailesimage {
+      overflow: hidden;
+      float: none;
+      padding: 0;
+    }
+  }
+}
+
+.propertydetailslist {
+  margin-left: 20px;
+  width: 27%;
+}
+
+.features_table {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: $light-color;
+  box-shadow: $box-shadow;
+
+  img {
+    max-width: 52px;
+    padding: 0;
+  }
+
+  .info {
+    border-bottom: 1px solid $border-color;
+    padding: 30px 0;
+    display: flex;
+
+    .information {
+      margin-left: 25px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.information p {
+  font-size: 15px;
+  color: $light-grey;
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+.details_info {
+  .detailscatagory {
+    background-color: $primary-color;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 14px;
+    color: $dark-color;
+    padding: 5px 12px;
+    display: inline-block;
+    margin-top: 40px;
+  }
+
+  h4 {
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 28px;
+    color: $text-color;
+  }
+}
+
+.propertdetails_title {
+  @include flex-center;
+  padding: 60px 0;
+  background-color: #fafafa;
+}
+
+.deal_content {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.deal_title {
+  margin-bottom: 70px;
+  width: 30%;
+
+  h6 {
+    color: $secondary-color;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 20px;
+    line-height: 56px;
+  }
+}
+
+.deal_info {
+  .deal_list {
+    border-bottom: none !important;
+    display: flex;
+    margin-bottom: 80px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: -130px;
+
+    li {
+      padding-right: 0px;
+      border-right: none;
+      margin-left: 20px;
+    }
+
+    .deal_link {
+      @include button-style($dark-color, $light-color);
+    }
+
+    .active_deal{
+      @include button-style($secondary-color, $light-color);
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 868px) {
+  .details_content {
+    flex-direction: column;
+  }
+
+  .deatails1 {
+    width: 100% !important;
+  }
+
+  .propertydetailslist {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .deal_title {
+    width: 90%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .deal_info .deal_list {
+    margin-top: 30px;
+  }
+
+  .deal_content {
+    align-items: center;
+  }
+}
+
+@media (max-width: 568px) {
+  .deal_info .deal_list {
+    li {
+      &:first-child {
+        margin-left: 0;
+      }
+      margin-left: 10px;
+    }
+
+    .deal_link, .active_deal{
+      font-size: 13px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0px 15px;
+    }
+  }
+}
